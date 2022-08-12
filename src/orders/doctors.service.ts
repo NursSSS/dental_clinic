@@ -43,7 +43,7 @@ export class DoctorsService {
         if ( [6, 0].includes(dto.date.getDay()) ) {
             throw new BadRequestException('В выходные стоматология не работает')
         } else if (dto.date.getHours() < 9 || dto.date.getHours() > 16) {
-            throw new BadRequestException('Cтоматология работает в будни с 9 до 16')
+            throw new BadRequestException('Cтоматология работает в будни с 9 до 17')
         } else if(dto.date < new Date()){
             throw new BadRequestException('Укажите правильную дату')
         }
